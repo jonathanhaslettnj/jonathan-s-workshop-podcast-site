@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unfolding Redemption's Plan – Directory</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { margin-bottom: 10px; }
+    ul { list-style-type: none; padding-left: 0; }
+    li { margin: 6px 0; }
+    a { text-decoration: none; color: #0645AD; }
+    a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h2>Unfolding Redemption's Plan – Files</h2>
+<ul id="fileList">Loading…</ul>
+
+<script>
+// Automatically list files in this GitHub Pages directory
+(async function() {
+    const apiUrl = "https://api.github.com/repos/jonathanhaslettnj/jonathan-s-workshop-podcast-site/contents/Unfolding Redeptions Plan/";
+
+    const list = document.getElementById("fileList");
+
+    try {
+        const response = await fetch(apiUrl);
+        const files = await response.json();
+
+        list.innerHTML = "";
+
+        files.forEach(item => {
+            if (item.name === "index.html") return; // hide index file
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${item.name}">${item.name}</a>`;
+            list.appendChild(li);
+        });
+    } catch (e) {
+        list.innerHTML = "Unable to load directory listing.";
+    }
+})();
+</script>
+
+</body>
+</html>
