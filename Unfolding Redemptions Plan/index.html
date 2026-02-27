@@ -1,57 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Unfolding Redemptions Plan – Directory</title>
-<style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    h2 { margin-bottom: 10px; }
-    ul { list-style-type: none; padding-left: 0; }
-    li { margin: 6px 0; }
-    a { text-decoration: none; color: #0645AD; }
-    a:hover { text-decoration: underline; }
-</style>
+    <meta charset="UTF-8">
+    <title>Jonathan's Workshop</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .link-large {
+            font-size: 24px;
+            display: block;
+            margin: 8px 0;
+        }
+
+        img {
+            margin-top: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="center">
-        <img src="Open%20Door.png" alt="Open Door" width="186" height="141">
-    </div>
-<h2>Unfolding Redemptions Plan – Files</h2>
-<ul id="fileList">Loading…</ul>
 
-<script>
-(async function() {
-    const folder = "Unfolding Redemptions Plan";
-    const apiUrl = `https://api.github.com/repos/jonathanhaslettnj/jonathan-s-workshop-podcast-site/contents/${encodeURIComponent(folder)}`;
+    <h1>Jonathan's Workshop</h1>
 
-    const list = document.getElementById("fileList");
+    <img src="Open%20Door.png" alt="Open Door" width="186" height="141">
 
-    try {
-        const response = await fetch(apiUrl);
-        const files = await response.json();
+    <a class="link-large" href="https://youtu.be/0c6kgNgWmt8" target="_blank">
+        Welcome
+    </a>
 
-        if (!Array.isArray(files)) throw new Error("API error");
+    <div class="section-title">Bible Study</div>
 
-        list.innerHTML = "";
+    <a class="link-large" href="contentment/index.html">
+        The Rare Jewel of Christian Contentment
+    </a>
 
-        files.forEach(item => {
-            if (item.name === "index.html") return;
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="${item.name}">${item.name}</a>`;
-            list.appendChild(li);
-        });
+    <a class="link-large" href="Precious Remedies/Index.html">
+        Precious Remedies
+    </a>
 
-    } catch (e) {
-        list.innerHTML = "Unable to load directory listing.";
-    }
-})();
-</script>
-<br><br>
-<div align="center">
-  <a href="../index.html">Return to Opening Page</a>
-</div>
+    <a class="link-large" href="Unfolding Redemptions Plan/index.html">
+        Sermons: Unfolding Redemptions Plan
+    </a>
+
+    <div class="section-title">Woodworking</div>
+
+    <a class="link-large" href="Woodworking/index.html">
+        Woodworking Videos
+    </a>
 
 </body>
-
 </html>
 
