@@ -1,75 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Jonathan's Workshop</title>
-
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            color: blue;
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: bold;
-            font-style: italic;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        .link-large {
-            font-size: 24px;
-            display: block;
-            margin: 8px 0;
-        }
-
-        img {
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>PDF Files</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { margin-bottom: 10px; }
+    ul { line-height: 1.8; }
+</style>
 </head>
-
 <body>
 
-    <h1>Jonathan's Workshop</h1>
+<h1>PDF Files in This Folder</h1>
+<ul id="fileList"></ul>
 
-    <img src="Open%20Door.png" alt="Open Door" width="186" height="141">
+<script>
+// Fetch the folder listing from GitHub Pages
+fetch(window.location.href)
+  .then(response => response.text())
+  .then(text => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const links = [...doc.querySelectorAll("a")];
 
-    <a class="link-large" href="https://youtu.be/0c6kgNgWmt8" target="_blank">
-        Welcome
-    </a>
+    const pdfLinks = links.filter(a => a.href.toLowerCase().endsWith(".pdf"));
 
-    <div class="section-title">Bible Study</div>
-
-    <a class="link-large" href="contentment/index.html">
-        The Rare Jewel of Christian Contentment
-    </a>
-
-    <a class="link-large" href="Precious Remedies/Index.html">
-        Precious Remedies
-    </a>
-
-    <a class="link-large" href="Unfolding Redemptions Plan/index.html">
-        Sermons: Unfolding Redemptions Plan
-    </a>
-
-    <div class="section-title">Woodworking</div>
-
-    <a class="link-large" href="Woodworking/index.html">
-        Woodworking Videos
-    </a>
+    const list = document.getElementById("fileList");
+    pdfLinks.forEach(link => {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${link.getAttribute('href')}" target="_blank">${link.textContent}</a>`;
+      list.appendChild(li);
+    });
+  });
+</script>
 
 </body>
 </html>
-
-
 
