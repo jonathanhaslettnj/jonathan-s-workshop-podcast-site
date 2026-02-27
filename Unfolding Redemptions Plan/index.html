@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <title>PDF Files</title>
 <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    h1 { margin-bottom: 10px; }
-    ul { line-height: 1.8; }
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  h1 { margin-bottom: 10px; }
+  ul { line-height: 1.8; }
 </style>
 </head>
 <body>
@@ -15,25 +15,27 @@
 <ul id="fileList"></ul>
 
 <script>
-// Fetch the folder listing from GitHub Pages
-fetch(window.location.href)
-  .then(response => response.text())
-  .then(text => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-    const links = [...doc.querySelectorAll("a")];
+const owner = "jonathanhaslettnj";
+const repo = "jonathan-s-workshop-podcast-site";
+const folder = "Unfolding Redemptions Plan";  // EXACT folder name
 
-    const pdfLinks = links.filter(a => a.href.toLowerCase().endsWith(".pdf"));
-
+fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(folder)}`)
+  .then(response => response.json())
+  .then(files => {
     const list = document.getElementById("fileList");
-    pdfLinks.forEach(link => {
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="${link.getAttribute('href')}" target="_blank">${link.textContent}</a>`;
-      list.appendChild(li);
+
+    files.forEach(file => {
+      if (file.name.toLowerCase().endsWith(".pdf")) {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${file.download_url}" target="_blank">${file.name}</a>`;
+        list.appendChild(li);
+      }
     });
-  });
+  })
+  .catch(err => console.error("Error loading files:", err));
 </script>
 
 </body>
 </html>
+
 
