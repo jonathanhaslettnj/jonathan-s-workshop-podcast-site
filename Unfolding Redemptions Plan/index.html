@@ -27,7 +27,10 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURICompone
     files.forEach(file => {
       if (file.name.toLowerCase().endsWith(".pdf")) {
         const li = document.createElement("li");
-        li.innerHTML = `<a href="${file.download_url}" target="_blank">${file.name}</a>`;
+
+        // Link to viewer page instead of direct PDF
+        li.innerHTML = `<a href="viewer.html?file=${encodeURIComponent(file.name)}" target="_blank">${file.name}</a>`;
+
         list.appendChild(li);
       }
     });
