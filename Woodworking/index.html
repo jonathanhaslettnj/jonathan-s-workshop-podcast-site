@@ -3,16 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Jonathan's Workshop – Woodworking Videos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; }
   h1 { text-align: center; margin-bottom: 30px; }
 
+  /* iPhone SE–friendly vertical video container */
   .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 177%; /* 9:16 for Shorts */
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 178%; /* Slightly taller than 9:16 to avoid Safari shrinking */
+    overflow: hidden;
     margin-bottom: 20px;
   }
+
   .video-container iframe {
     position: absolute;
     top: 0;
@@ -20,28 +27,42 @@
     width: 100%;
     height: 100%;
     border: none;
+
+    /* Safari iPhone SE fix */
+    transform: scale(1.02);
+    transform-origin: center;
   }
 
-  .return-link { text-align: center; margin-top: 50px; }
+  .notes-link {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .return-link {
+    text-align: center;
+    margin-top: 50px;
+  }
 </style>
 </head>
 <body>
 
 <h1>Woodworking Videos</h1>
 
+<!-- Video 1 -->
 <div class="video-container">
   <iframe src="https://www.youtube.com/embed/j7inrTTX16c" allowfullscreen></iframe>
 </div>
-<p style="text-align:center;">
+<div class="notes-link">
   <a href="https://youtube.com/shorts/j7inrTTX16c" target="_blank">Watch on YouTube (includes notes)</a>
-</p>
+</div>
 
+<!-- Video 2 -->
 <div class="video-container">
   <iframe src="https://www.youtube.com/embed/JcndgUPrDiA" allowfullscreen></iframe>
 </div>
-<p style="text-align:center;">
+<div class="notes-link">
   <a href="https://youtube.com/shorts/JcndgUPrDiA" target="_blank">Watch on YouTube (includes notes)</a>
-</p>
+</div>
 
 <div style="margin-top: 40px; text-align: center;">
   <a href="../index.html">Return to Opening Page</a>
@@ -49,6 +70,7 @@
 
 </body>
 </html>
+
 
 
 
