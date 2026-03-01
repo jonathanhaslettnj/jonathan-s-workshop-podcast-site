@@ -9,6 +9,15 @@
         body {
             font-size: 20px; /* Slightly larger type */
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* This container keeps everything centered properly */
+        .page-container {
+            max-width: 700px;
+            margin: 0 auto;      /* TRUE centering */
+            padding: 20px;
         }
 
         h1 {
@@ -39,11 +48,8 @@
             width: 100%;
             max-width: 420px;
             padding-bottom: 56.25%; /* 16:9 ratio */
-            margin-left: auto;   /* These two lines */
-            margin-right: auto;  /* center the viewer */
-            margin-top: 30px;
-            margin-bottom: 30px;
-            display: block;      /* Ensures proper centering */
+            margin: 30px auto;      /* centers the viewer */
+            display: block;
         }
 
         .video-wrapper iframe {
@@ -52,78 +58,76 @@
             height: 100%;
             border: none;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 
   </head>
 
   <body>
 
-    <h1>Welcome to Jonathan's Workshop</h1>
+    <div class="page-container">
 
-    <h2>
-      The Rare Jewel of Christian Contentment
-    </h2>
+      <h1>Welcome to Jonathan's Workshop</h1>
 
-    <div class="link-list">
+      <h2>The Rare Jewel of Christian Contentment</h2>
 
-      <!-- VIDEO 1 -->
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/kf2kGthZZXc?playlist=kf2kGthZZXc&loop=1"
-          allowfullscreen>
-        </iframe>
+      <div class="link-list">
+
+        <!-- VIDEO 1 -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/kf2kGthZZXc?playlist=kf2kGthZZXc&loop=1"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="center">Biography of Jeremiah Burroughs (video)</div>
+
+        <a href="01 Contentment.pdf">
+          Christian Contentment Described, Part 1 (text)
+        </a>
+
+        <a href="02 Contentment.pdf">
+          Christian Contentment Described, Part 2 (text)
+        </a>
+
+        <!-- VIDEO 2 -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/09s5R3o98Go?playlist=09s5R3o98Go&loop=1"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="center">Introduction: How Jesus Teaches Contentment (video)</div>
+
+        <a href="03 Contentment.pdf">
+          How Jesus Teaches Contentment, Part 1
+        </a>
+
+        <!-- VIDEO 3 -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/-W_YwXY4rWk?playlist=-W_YwXY4rWk&loop=1"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="center">How Jesus Teaches Contentment, Part 2 (video)</div>
+
+        <a href="04 Contentment.pdf">
+          How Jesus Teaches Contentment, Part 2
+        </a>
+
       </div>
-      <div style="text-align:center;">Biography of Jeremiah Burroughs (video)</div>
 
-      <a href="01 Contentment.pdf">
-        Christian Contentment Described, Part 1 (text)
-      </a>
+      <br><br>
 
-      <a href="02 Contentment.pdf">
-        Christian Contentment Described, Part 2 (text)
-      </a>
-
-      <!-- VIDEO 2 -->
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/09s5R3o98Go?playlist=09s5R3o98Go&loop=1"
-          allowfullscreen>
-        </iframe>
+      <div class="center">
+        <a href="../index.html">Return to Opening Page</a>
       </div>
-      <div style="text-align:center;">Introduction: How Jesus Teaches Contentment (video)</div>
-
-      <a href="03 Contentment.pdf">
-        How Jesus Teaches Contentment, Part 1
-      </a>
-
-      <!-- VIDEO 3 -->
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/-W_YwXY4rWk?playlist=-W_YwXY4rWk&loop=1"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div style="text-align:center;">How Jesus Teaches Contentment, Part 2 (video)</div>
-
-      <a href="04 Contentment.pdf">
-        How Jesus Teaches Contentment, Part 2
-      </a>
 
     </div>
 
-    <br><br>
-
-    <div style="text-align:center;">
-      <a href="../index.html">Return to Opening Page</a>
-    </div>
-
-    <br>
-
   </body>
 </html>
-
-
-  </body>
-</html>
-
-
