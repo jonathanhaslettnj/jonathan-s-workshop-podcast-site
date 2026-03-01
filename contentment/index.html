@@ -12,21 +12,17 @@
         }
 
         h1 {
-            font-size: 52px; /* Slightly larger */
+            font-size: 52px;
             font-weight: bold;
             color: blue;
             text-align: center;
         }
 
         h2 {
-            font-size: 34px; /* Slightly larger */
+            font-size: 34px;
             font-weight: bold;
             color: darkgreen;
             margin-top: 40px;
-            text-align: center;
-        }
-
-        .center {
             text-align: center;
         }
 
@@ -37,13 +33,17 @@
             text-decoration: none;
         }
 
-        /* Centered compact looping viewer */
+        /* TRUE centered compact looping viewer */
         .video-wrapper {
             position: relative;
             width: 100%;
             max-width: 420px;
             padding-bottom: 56.25%; /* 16:9 ratio */
-            margin: 30px auto; /* This centers the viewer */
+            margin-left: auto;   /* These two lines */
+            margin-right: auto;  /* center the viewer */
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: block;      /* Ensures proper centering */
         }
 
         .video-wrapper iframe {
@@ -64,7 +64,7 @@
       The Rare Jewel of Christian Contentment
     </h2>
 
-    <div class="center link-list">
+    <div class="link-list">
 
       <!-- VIDEO 1 -->
       <div class="video-wrapper">
@@ -73,7 +73,7 @@
           allowfullscreen>
         </iframe>
       </div>
-      Biography of Jeremiah Burroughs (video)
+      <div style="text-align:center;">Biography of Jeremiah Burroughs (video)</div>
 
       <a href="01 Contentment.pdf">
         Christian Contentment Described, Part 1 (text)
@@ -90,7 +90,7 @@
           allowfullscreen>
         </iframe>
       </div>
-      Introduction: How Jesus Teaches Contentment (video)
+      <div style="text-align:center;">Introduction: How Jesus Teaches Contentment (video)</div>
 
       <a href="03 Contentment.pdf">
         How Jesus Teaches Contentment, Part 1
@@ -103,7 +103,7 @@
           allowfullscreen>
         </iframe>
       </div>
-      How Jesus Teaches Contentment, Part 2 (video)
+      <div style="text-align:center;">How Jesus Teaches Contentment, Part 2 (video)</div>
 
       <a href="04 Contentment.pdf">
         How Jesus Teaches Contentment, Part 2
@@ -113,7 +113,7 @@
 
     <br><br>
 
-    <div class="center">
+    <div style="text-align:center;">
       <a href="../index.html">Return to Opening Page</a>
     </div>
 
@@ -121,4 +121,9 @@
 
   </body>
 </html>
+
+
+  </body>
+</html>
+
 
