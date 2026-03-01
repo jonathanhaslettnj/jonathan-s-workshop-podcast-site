@@ -18,17 +18,33 @@
             color: darkgreen;
             margin-top: 40px;
         }
-        /* This is what centers the image */
+
         .center {
             text-align: center;
         }
-      .link-list a {
-    display: block;
-    padding: 8px 0;
-    border-bottom: 1px solid #999;
-    text-decoration: none;
-}
 
+        .link-list a {
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid #999;
+            text-decoration: none;
+        }
+
+        /* Compact looping viewer */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            margin: 25px auto;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 
   </head>
@@ -38,50 +54,69 @@
     <h1>Welcome to Jonathan's Workshop</h1>
 
     <div class="center">
-        <img src="Open%20Door.png" alt="Open Door" width="186" height="141">
+        <img src="Open Door.png" alt="Open Door" width="186" height="141">
     </div>
 
     <h2 align="center">
       The Rare Jewel of Christian Contentment<br>
     </h2>
 
-   
-    <ul>
-    </ul>
-   <div class="center link-list">
-    <a href="https://youtu.be/kf2kGthZZXc" target="_blank">
-        Biography of Jeremiah Burroughs (video)
-    </a>
+    <ul></ul>
 
-    <a href="01 Contentment.pdf">
+    <div class="center link-list">
+
+      <!-- VIDEO 1 -->
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/kf2kGthZZXc?playlist=kf2kGthZZXc&loop=1"
+          allowfullscreen>
+        </iframe>
+      </div>
+      Biography of Jeremiah Burroughs (video)
+
+      <a href="01 Contentment.pdf">
         Christian Contentment Described, Part 1 (text)
-    </a>
+      </a>
 
-    <a href="02 Contentment.pdf">
+      <a href="02 Contentment.pdf">
         Christian Contentment Described, Part 2 (text)
-    </a>
+      </a>
 
-    <a href="https://youtu.be/09s5R3o98Go" target="_blank">
-        Introduction: How Jesus Teaches Contentment (video)
-    </a>
+      <!-- VIDEO 2 -->
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/09s5R3o98Go?playlist=09s5R3o98Go&loop=1"
+          allowfullscreen>
+        </iframe>
+      </div>
+      Introduction: How Jesus Teaches Contentment (video)
 
-    <a href="03 Contentment.pdf">
+      <a href="03 Contentment.pdf">
         How Jesus Teaches Contentment, Part 1
-    </a>
-    <a href="https://youtu.be/-W_YwXY4rWk" target="_blank">
-        How Jesus Teaches Contentment, Part 2 (video)
-    </a>
+      </a>
 
-    <a href="04 Contentment.pdf">
+      <!-- VIDEO 3 -->
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/-W_YwXY4rWk?playlist=-W_YwXY4rWk&loop=1"
+          allowfullscreen>
+        </iframe>
+      </div>
+      How Jesus Teaches Contentment, Part 2 (video)
+
+      <a href="04 Contentment.pdf">
         How Jesus Teaches Contentment, Part 2
-    </a>
-</div>
+      </a>
 
-
-           <br><br>
-<div align="center">
-  <a href="../index.html">Return to Opening Page</a>
     </div>
+
+    <br><br>
+
+    <div align="center">
+      <a href="../index.html">Return to Opening Page</a>
+    </div>
+
     &nbsp; <br>
+
   </body>
 </html>
