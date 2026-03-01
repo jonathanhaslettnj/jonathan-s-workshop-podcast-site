@@ -6,19 +6,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  body { font-family: Arial, sans-serif; padding: 20px; }
-  h1 { text-align: center; margin-bottom: 30px; }
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
 
-  .video-link {
-    display: block;
+  h1 {
     text-align: center;
-    margin: 30px 0;
-    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+
+  /* Video container that scales beautifully on iPhone SE */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    margin-bottom: 15px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Boxed text under each video */
+  .video-description {
+    border: 2px solid #444;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-bottom: 40px;
+    font-size: 1em;
   }
 
   .return-link {
-    margin-top: 40px;
     text-align: center;
+    margin-top: 40px;
   }
 </style>
 </head>
@@ -26,20 +53,35 @@
 
 <h1>Jonathan's Woodworking Videos</h1>
 
-<a class="video-link" href="https://youtube.com/shorts/j7inrTTX16c" target="_blank">
-  ▶️ Watch What Happens When Matchfit Dovetail Clamps Are Used with a Pocket Hole Jig (with sound & notes)
-</a>
+<!-- VIDEO 1 -->
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/j7inrTTX16c?playlist=j7inrTTX16c&loop=1"
+    allowfullscreen>
+  </iframe>
+</div>
 
-<a class="video-link" href="https://youtube.com/shorts/JcndgUPrDiA" target="_blank">
-  ▶️ Watch How to Prevent Tools from Slipping Off a Dowell (with sound & notes)
-</a>
+<div class="video-description">
+  <strong>What Happens When Matchfit Dovetail Clamps Are Used with a Pocket Hole Jig</strong><br>
+  This short demonstrates how the clamps interact with the jig and why the setup works surprisingly well.
+</div>
 
-<div style="margin-top: 40px; text-align: center;">
+<!-- VIDEO 2 -->
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/JcndgUPrDiA?playlist=JcndgUPrDiA&loop=1"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div class="video-description">
+  <strong>How to Prevent Tools from Slipping Off a Dowell</strong><br>
+  A simple trick that keeps tools stable and prevents accidental drops.
+</div>
+
+<div class="return-link">
   <a href="../index.html">Return to Opening Page</a>
 </div>
 
 </body>
 </html>
-
-
-
