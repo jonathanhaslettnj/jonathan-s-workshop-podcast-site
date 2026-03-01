@@ -15,15 +15,40 @@
 
   h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
-  /* Video container that scales beautifully on iPhone SE */
+  /* Toggle button */
+  #sizeToggle {
+    display: block;
+    margin: 0 auto 25px auto;
+    padding: 10px 18px;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 2px solid #444;
+    background: #eee;
+    cursor: pointer;
+  }
+
+  /* Default = large */
   .video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%;
     margin-bottom: 15px;
+    transition: max-width 0.3s ease;
+  }
+
+  /* Large mode (fills iPhone SE width) */
+  .large .video-wrapper {
+    max-width: 100%;
+  }
+
+  /* Compact mode (smaller viewer) */
+  .compact .video-wrapper {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .video-wrapper iframe {
@@ -33,7 +58,6 @@
     border: none;
   }
 
-  /* Boxed text under each video */
   .video-description {
     border: 2px solid #444;
     padding: 12px;
@@ -49,9 +73,11 @@
   }
 </style>
 </head>
-<body>
+<body class="large">
 
 <h1>Jonathan's Woodworking Videos</h1>
+
+<button id="sizeToggle">Switch to Compact Size</button>
 
 <!-- VIDEO 1 -->
 <div class="video-wrapper">
@@ -83,5 +109,23 @@
   <a href="../index.html">Return to Opening Page</a>
 </div>
 
+<script>
+  const body = document.body;
+  const toggle = document.getElementById('sizeToggle');
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('compact');
+    body.classList.toggle('large');
+
+    if (body.classList.contains('compact')) {
+      toggle.textContent = "Switch to Large Size";
+    } else {
+      toggle.textContent = "Switch to Compact Size";
+    }
+  });
+</script>
+
 </body>
 </html>
+
+
