@@ -8,17 +8,16 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    padding: 0; /* removed padding for edge-to-edge video */
     max-width: 800px;
     margin: auto;
   }
 
   h1 {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 20px 0 10px 0; /* restores spacing above title */
   }
 
-  /* Toggle button */
   #sizeToggle {
     display: block;
     margin: 0 auto 25px auto;
@@ -30,7 +29,6 @@
     cursor: pointer;
   }
 
-  /* Default = large */
   .video-wrapper {
     position: relative;
     width: 100%;
@@ -39,12 +37,10 @@
     transition: max-width 0.3s ease;
   }
 
-  /* Large mode (fills iPhone SE width) */
   .large .video-wrapper {
-    max-width: 100%;
+    max-width: 100%; /* full width */
   }
 
-  /* Compact mode (smaller viewer) */
   .compact .video-wrapper {
     max-width: 420px;
     margin-left: auto;
@@ -63,7 +59,7 @@
     padding: 12px;
     border-radius: 8px;
     background: #f9f9f9;
-    margin-bottom: 40px;
+    margin: 20px;
     font-size: 1em;
   }
 
@@ -73,6 +69,7 @@
   }
 </style>
 </head>
+
 <body class="large">
 
 <h1>Jonathan's Woodworking Videos</h1>
@@ -89,7 +86,7 @@
 
 <div class="video-description">
   <strong>What Happens When Matchfit Dovetail Clamps Are Used with a Pocket Hole Jig</strong><br>
-  This short demonstrates how the clamps interact with the jig and why the setup works surprisingly well. 
+  This short demonstrates how the clamps interact with the jig and why the setup works surprisingly well.
 </div>
 
 <!-- VIDEO 2 -->
@@ -127,7 +124,3 @@
 
 </body>
 </html>
-
-
-
-
