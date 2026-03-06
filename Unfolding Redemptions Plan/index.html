@@ -3,15 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <title>PDF Files</title>
+
 <style>
-  body { font-family: Arial, sans-serif; padding: 20px; }
-  h1 { margin-bottom: 10px; }
-  ul { line-height: 1.8; }
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    color: blue;
+    font-size: 36px;
+  }
+
+  ul {
+    line-height: 1.8;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  ul li a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  /* Standard return box used across your site */
+  .return-box {
+    background: #e6f2ff;
+    border: 2px solid #7aaee6;
+    padding: 12px;
+    margin: 40px auto 0 auto;
+    width: 70%;
+    max-width: 350px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .return-box a {
+    text-decoration: none;
+    color: #004a99;
+  }
 </style>
+
 </head>
 <body>
 
 <h1>PDF Files in This Folder</h1>
+
 <ul id="fileList"></ul>
 
 <script>
@@ -38,7 +78,7 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURICompone
   .catch(err => console.error("Error loading files:", err));
 </script>
 
-<div style="margin-top: 40px; text-align: center;">
+<div class="return-box">
   <a href="../index.html">Return to Opening Page</a>
 </div>
 
