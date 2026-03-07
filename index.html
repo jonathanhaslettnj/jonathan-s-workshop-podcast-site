@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Jonathan's Workshop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan's Workshop</title>
 
-    <style>
-        body {
-            text-align: center;
-            font-size: 22px;        /* Larger base text for iPhone SE */
-            line-height: 1.5;
-            background-color: #fafafa;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        h1 {
-            font-size: 52px;
-            font-weight: bold;
-            color: blue;
-            margin-top: 20px;
-        }
+/* ------------------------------
+   BASE PAGE STYLING (DESKTOP)
+   ------------------------------ */
 
-        .section-title {
-            font-size: 40px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+}
 
-        .bible-box, .wood-box {
-            width: 90%;
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 12px;
-        }
+h1 {
+  color: #003399;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
-        .bible-box {
-            background-color: #fff7e0; /* warm light-gold */
-            border: 2px solid #e0c98a;
-        }
+h2 {
+  color: #004d00;
+  font-size: 24px;
+  margin-top: 30px;
+}
 
-        .wood-box {
-            background-color: #e8f3ff; /* soft light-blue */
-            border: 2px solid #9cc4e8;
-        }
+iframe {
+  width: 560px;
+  height: 315px;
+  max-width: 100%;
+  border: none;
+}
 
-        .link-block {
-            margin: 12px 0;
-            font-size: 26px;
-        }
+/* Link blocks */
+a {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 90%;
+  max-width: 400px;
+  border: 2px solid #003399;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #003399;
+  font-size: 18px;
+}
 
-        /* Wider YouTube viewer for iPhone SE */
-        .video-wrapper {
-            width: 100%;
-            max-width: 420px;
-            aspect-ratio: 16 / 9;
-            position: relative;
-            margin: 0 auto;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+/* Return box (if you use one later) */
+.return-box {
+  margin-top: 40px;
+  padding: 12px;
+  background-color: #cce6ff;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* -----------------------------------------
+   PHONE‑ONLY ADJUSTMENTS — 25% LARGER
+   ----------------------------------------- */
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 22px;   /* +25% */
+  }
+
+  h1 {
+    font-size: 40px;   /* +25% */
+  }
+
+  h2 {
+    font-size: 30px;   /* +25% */
+  }
+
+  a {
+    font-size: 22px;   /* +25% */
+    padding: 14px 0;   /* +25% */
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-    <h1>Jonathan's Workshop</h1>
+<h1>Jonathan's Workshop</h1>
 
-    <div class="video-wrapper">
-        <iframe
-            src="https://www.youtube.com/embed/0c6kgNgWmt8?loop=1&playlist=0c6kgNgWmt8"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-    </div>
+<!-- YouTube Video -->
+<iframe 
+  src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+  allowfullscreen>
+</iframe>
 
-    <!-- Bible Study Section -->
-    <div class="bible-box">
-        <div class="section-title" style="color: darkgreen;">
-            Bible Study
-        </div>
+<!-- Bible Study Section -->
+<h2>Bible Study</h2>
 
-        <div class="link-block">
-            <a href="contentment/index.html">The Rare Jewel of Christian Contentment</a>
-        </div>
+<a href="rare-jewel.html">The Rare Jewel of Christian Contentment</a>
+<a href="precious-remedies.html">Precious Remedies</a>
+<a href="sermons.html">Sermons: Unfolding Redemption’s Plan</a>
 
-        <div class="link-block">
-            <a href="Precious Remedies/index.html">Precious Remedies</a>
-        </div>
+<!-- Woodworking Section -->
+<h2>Woodworking</h2>
 
-        <div class="link-block">
-            Sermons:
-            <a href="Unfolding Redemptions Plan/index.html">Unfolding Redemptions Plan</a>
-        </div>
-    </div>
-
-    <!-- Woodworking Section -->
-    <div class="wood-box">
-        <div class="section-title" style="color: darkgreen;">
-            Woodworking
-        </div>
-
-        <div class="link-block">
-            <a href="Woodworking/index.html">Woodworking Videos</a>
-        </div>
-    </div>
+<a href="woodworking-videos.html">Woodworking Videos</a>
 
 </body>
 </html>
