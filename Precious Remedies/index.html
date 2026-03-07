@@ -40,17 +40,20 @@
     border-radius: 8px;
   }
 
-  .link-list a {
-    display: block;
-    padding: 10px 0;
-    border-bottom: 1px solid #999;
-    text-decoration: none;
+  /* NEW: Simple bordered link boxes */
+  .simple-box {
+    border: 2px solid #7aaee6;
+    padding: 12px;
+    margin: 25px auto;
+    width: 70%;
+    max-width: 350px;
+    border-radius: 8px;
     font-size: 20px;
   }
 
-  .link-box {
-    margin-top: 25px;
-    font-size: 22px;
+  .simple-box a {
+    text-decoration: none;
+    color: #004a99;
   }
 
   .return-box {
@@ -75,24 +78,20 @@
   @media (max-width: 480px) {
 
     body {
-      font-size: 22px; /* +25% */
+      font-size: 22px;
     }
 
     h1 {
-      font-size: 60px; /* +25% */
+      font-size: 60px;
     }
 
     h2 {
-      font-size: 40px; /* +25% */
+      font-size: 40px;
     }
 
-    .link-list a {
-      font-size: 25px; /* +25% */
-      padding: 12px 0;
-    }
-
-    .link-box {
-      font-size: 28px;
+    .simple-box {
+      font-size: 25px;
+      padding: 15px;
     }
 
     .return-box {
@@ -119,13 +118,15 @@
   </iframe>
 </div>
 
-<a href="01 Remedies.pdf">Introduction to Remedies for Satan's Devices</a>
-<br><br>
+<div class="simple-box">
+  <a href="01 Remedies.pdf">Introduction to Remedies for Satan's Devices</a>
+</div>
 
-
-<a href="/jonathan-s-workshop-podcast-site/Precious%20Remedies/Sin/index.htm">
-  Remedies for Temptation to Sin
-</a>
+<div class="simple-box">
+  <a href="/jonathan-s-workshop-podcast-site/Precious%20Remedies/Sin/index.htm">
+    Remedies for Temptation to Sin
+  </a>
+</div>
 
 <div class="return-box">
   <a href="../index.html">Return to Opening Page</a>
@@ -133,3 +134,4 @@
 
 </body>
 </html>
+
