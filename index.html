@@ -7,23 +7,53 @@
     <style>
         body {
             text-align: center;
+            font-size: 22px;        /* Larger base text for iPhone SE */
+            line-height: 1.5;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
         }
+
         h1 {
-            font-size: 48px;
+            font-size: 52px;
             font-weight: bold;
             color: blue;
+            margin-top: 20px;
         }
-        h2 {
-            font-size: 32px;
+
+        .section-title {
+            font-size: 40px;
             font-weight: bold;
-            color: darkgreen;
-            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .bible-box, .wood-box {
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .bible-box {
+            background-color: #fff7e0; /* warm light-gold */
+            border: 2px solid #e0c98a;
+        }
+
+        .wood-box {
+            background-color: #e8f3ff; /* soft light-blue */
+            border: 2px solid #9cc4e8;
+        }
+
+        .link-block {
+            margin: 12px 0;
+            font-size: 26px;
         }
 
         /* Wider YouTube viewer for iPhone SE */
         .video-wrapper {
             width: 100%;
-            max-width: 420px;   /* about 2× wider than before */
+            max-width: 420px;
             aspect-ratio: 16 / 9;
             position: relative;
             margin: 0 auto;
@@ -42,9 +72,6 @@
 
     <h1>Jonathan's Workshop</h1>
 
-    <br>
-
-    <!-- Looping YouTube viewer -->
     <div class="video-wrapper">
         <iframe
             src="https://www.youtube.com/embed/0c6kgNgWmt8?loop=1&playlist=0c6kgNgWmt8"
@@ -54,32 +81,36 @@
         </iframe>
     </div>
 
-    <br><br>
+    <!-- Bible Study Section -->
+    <div class="bible-box">
+        <div class="section-title" style="color: darkgreen;">
+            Bible Study
+        </div>
 
-    <font size="+5"><i><b>Bible Study</b></i></font>
-    <br>
-    <font size="+4">
-        <a href="contentment/index.html">The Rare Jewel of Christian Contentment</a>
-    </font>
-    <br>
-    <font size="+4">
-        <a href="Precious Remedies/index.html">Precious Remedies</a>
-    </font>
-    <br>
-    <font size="+4">
-        Sermons:
-        <a href="Unfolding Redemptions Plan/index.html">Unfolding Redemptions Plan</a>
-    </font>
+        <div class="link-block">
+            <a href="contentment/index.html">The Rare Jewel of Christian Contentment</a>
+        </div>
 
-    <br><br>
+        <div class="link-block">
+            <a href="Precious Remedies/index.html">Precious Remedies</a>
+        </div>
 
-    <font size="+5"><i><b>Woodworking</b></i></font>
-    <br>
-    <font size="+4">
-        <a href="Woodworking/index.html">Woodworking Videos</a>
-    </font>
+        <div class="link-block">
+            Sermons:
+            <a href="Unfolding Redemptions Plan/index.html">Unfolding Redemptions Plan</a>
+        </div>
+    </div>
+
+    <!-- Woodworking Section -->
+    <div class="wood-box">
+        <div class="section-title" style="color: darkgreen;">
+            Woodworking
+        </div>
+
+        <div class="link-block">
+            <a href="Woodworking/index.html">Woodworking Videos</a>
+        </div>
+    </div>
 
 </body>
 </html>
-
-
